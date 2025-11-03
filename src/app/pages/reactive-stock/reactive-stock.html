@@ -1,1 +1,11 @@
-<p>reactive-stock works!</p>
+<h1>Reactive Stock Page</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <stock-add-reactive (OnNewStock)="stockService.addStock($event)"></stock-add-reactive>
+  </div>
+  <div class="col">
+    <stock-list [stockList]="stockService.stocklist()"></stock-list>
+  </div>
+</div>
